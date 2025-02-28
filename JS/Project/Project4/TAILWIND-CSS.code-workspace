@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../TAILWIND-CSS"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WEB-DEV"
+	}
+}

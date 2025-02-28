@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+            background-color: gray;
+            box-sizing: border-box;
+        }
+        #main{
+            width: 40vw;
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(71, 60, 60, 0.568);
+            color: rgb(255, 255, 255);
+            box-shadow: 10px 8px 20px black;
+            border-radius: 15px;
+            gap: 15px;
+            font-size: 20px;
+            #URL{
+                background-color:transparent;
+                width: 25vw;
+                height: 25px;
+                border-radius: 10px;
+                border: 2px solid rgb(86, 170, 75);
+            }
+            #submit{
+                background-color: rgba(33, 240, 6, 0.692);
+                width: 10vw;
+                height: 25px;
+                border-radius: 10px;
+                border: none;
+                color: white;
+                font-size: 15px;
+            }
+            #submit:hover{
+                transform:scale(0.9);
+                transition-delay: 0.20s;
+            }
+        }
+        #sub{
+            visibility: hidden;
+            box-sizing: border-box;
+            width: 25vw;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(71, 60, 60, 0.568);
+            color: rgb(255, 255, 255);
+            box-shadow: 10px 8px 20px black;
+            border-radius: 15px;
+            gap: 15px;
+            font-size: 20px;
+            padding: 20px;
+            margin: auto;
+            #image{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: aliceblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div id="main">
+                <label for="URL">Enter Github api URL for get Profile image and followers</label>
+                <input type="text" id="URL" placeholder="Enter Github api URL"/>
+                <input type="submit" id="submit" value="Submit"/>
+            </div>
+        </form>
+        <div id="sub">
+            <img src="" alt="Profile Image" id="image">
+            <h5 id="name">xyz</h5>
+            <h5 id="followers">....</h5>
+        </div>
+    </div>
+</body>
+<script>
+
+    const form = document.querySelector('form')
+    const cart = document.getElementById('sub')
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault()
+        setDetaile(document.getElementById('URL').value)
+    })
+
+    const setDetaile = function(URL){
+
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET',URL)
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText)
+                imageURL = data.avatar_url
+                name = data.name
+                followers = data.followers
+
+                document.getElementById('image').setAttribute('src',imageURL)
+                document.getElementById('name').innerHTML = `User Name :- ${name}`
+                document.getElementById('followers').innerHTML = `Total followers :- ${followers}`
+        
+            }
+        }
+        xhr.send()
+        cart.style.visibility = 'visible';
+    }
+</script>
+</html>
