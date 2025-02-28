@@ -1,0 +1,16 @@
+h1{
+    font-size:larger;
+    text-align: center;
+}
+#fot{
+    text-align: center;
+    color: brown;
+    background-color: black;
+}
+.pr{
+    background-color: green;
+    color: white;
+}
+h1,p,article,footer{
+    width: 500px;    
+}

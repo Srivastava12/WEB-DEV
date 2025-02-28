@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(0,212,255,1) 83%);
+}
+.header{
+    width: 100%;
+    height: 8%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(0,212,255,1) 83%);
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: bold;
+}
+.container1{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding-top: 10px;
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(35%, 25%));
+    justify-content: center;
+    box-shadow: 0px 0px 15px 10px rgba(78, 75, 75, 0.74);
+    background-color: rgba(255, 255, 255, 0.548);
+}
+.subContainer{
+     box-sizing: border-box;
+     border-radius: 10px;
+     /* border: 3px solid rgba(77, 74, 74, 0.671); */
+     box-shadow: 0px 0px 15px 0px rgba(78, 75, 75, 0.74);
+} 
+#subConn{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-around;
+}
+#image{
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all 0.10s ease-in 0s;
+}
+#image:hover{
+    transform:scale(1.1);
+}
+#description{
+    padding: 20px;
+}
+#logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(77, 74, 74, 0.671);
+}
+#details{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    justify-content:space-between;
+    transition: all 0.10s ease-in 0s;
+}
+#details:hover{
+    transform:scale(1.1);
+}
+#btn{
+     width: 30%;
+     height: 50%;
+     color: rgba(77, 74, 74, 0.671);
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#dpar{
+    color: rgba(77, 74, 74, 0.671);
+}
+#imageDetails{
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+#name{
+    color: rgb(4, 0, 255);
+}

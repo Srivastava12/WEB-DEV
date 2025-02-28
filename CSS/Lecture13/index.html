@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transforms</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: beige;
+            border: 2px solid black;
+
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin-top: 10%;
+            margin-left: 25%;
+            transition: all 1s linear 0ms;
+        }
+        .box:hover{
+            /* transform: rotate(360deg);
+            border-top-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+            background-color: brown;
+            width: 200px;
+            height: 200px; */
+            /* transform: scale(2); */
+            /* transform: scale(0.5); */
+            /* transform: rotate(-90deg); */
+            /* transform: skew(45deg); */
+            /* transform: translate(500px); */
+            /* transform: translate(-500px); */
+            /* transform: translate(0px,500px); */
+            /* transform: translate(0px,-500px) */
+            transform: translate(500px,500px);
+        }
+        p{
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+     <div class="box">
+        <p>This is CSS Box</p>
+     </div>
+</body>
+</html>
