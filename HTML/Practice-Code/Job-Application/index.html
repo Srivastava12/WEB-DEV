@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Job Application</h2>
+    <form>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="Email">Email:</label>
+        <br>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="tel">Phone:</label>
+        <br>
+        <input type="tel" name="tel" id="tel">
+        <br>
+        <br>
+        <label for="resuma">Resuma:</label>
+        <br>
+        <input type="file" name="resuma" id="resuma">
+        <br>
+        <br>
+        <label for="exp">Experience(years):</label>
+        <br>
+        <input type="number" name="exp" id="exp" min="0"max="50">
+        <br>
+        <br>
+        <fieldset>
+            <legend>Skills:</legend>
+            <label for="html">HTML</label>
+            <input type="checkbox" name="skil" id="html">
+            <br>
+            <label for="css">CSS</label>
+            <input type="checkbox" name="skil" id="css">
+            <br>
+            <label for="js">JavaScript</label>
+            <input type="checkbox" name="skil" id="js">
+        </fieldset>
+        <br>
+        <label for="he">Highest Education:</label>
+        <br>
+        <select name="he" id="he">
+            <option value="highschool">High School</option>
+            <option value="Under Graduate">Under Graduate</option>
+            <option value="Post Graduate">Post Graduate</option>
+        </select>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Availability:</legend>
+            <label>Full Time</label>
+            <input type="radio" name="av" id="av">
+            <br>
+            <label>Part Time</label>
+            <input type="radio" name="av" id="av">
+        </fieldset>
+        <br>
+        <label for="adcomment">Additional Comment</label>
+        <br>
+        <textarea name="adcomment" id="adcomment" rows="15" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
